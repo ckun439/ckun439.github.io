@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>New Zealand Tourism</title>
+  <meta charset="utf-8">
+  <link href="scss/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="script.js" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+  <div class="container1">
+    <div class="container1__logo">
+      <img src="images/logo.png" alt="logo">
+    </div>
+    <div class="container1__text">
+        <h3>corporate website</h3>
+        <h1>tourism new zealand</h1>
+      </div>
+    </div>
+  </div>
+  
+  <span id="page1">
+      <!-- Title + paragraph-->
+    <div class="container2">
+      <div class="container2__title">
+        <h1>biy</h1>
+        <h2>book it yourself</h2>
+      </div>
+      <hr>
+      <div class="container2__text">
+        <p>Tourism New Zealand is an organisation that supports NZ’s vast tourism industry and exhibits New Zealand as a tourist destination by marketing in specific groups in the global economy. 
+          The purpose of this project is to work with Tourism New Zealand and develop a single page web application. This application must allow for visitors to dynamically assess accommodation options that are given as feedback to inputs made by the user. The project that will commence will centre around Tourism New Zealand's newest campaign ‘BIY’ book it yourself campaign that focuses on users given their easy accessibility to ‘book it yourself’. The target audience of this project will focus on small groups looking to book short period holidays in New Zealand. BIY will facilitate these individuals by offering an easy, user focused, simplistic and aesthetic way of booking their next short holiday
+        </p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <span id="slider__img1"></span>
+      <span id="slider__img2"></span>
+      <span id="slider__img3"></span>
+      <div class="slider__imgs">
+        <img src="images/img3.png" class="slider__pic" alt="img1">
+        <img src="images/img1.png" class="slider__pic" alt="img2">
+        <img src="images/img2.png" class="slider__pic" alt="img3">
+      </div>
+      <div class="button-container">
+        <a href="#slider__img1" class="button-container__button"></a>
+        <a href="#slider__img2" class="button-container__button"></a>
+        <a href="#slider__img3" class="button-container__button"></a>
+      </div>
+    </div>
+
+    <!-- Title + Form -->
+    <div class="container2">
+      <div class="container2__title">
+        <h1>get started</h1>
+        <h2>your chance to explore</h2>
+      </div>
+      <hr>
+      </div>
+    </div>
+
+    <div class="form" action="Home.html" method="GET">
+      <form>
+        <div class="form__section1">
+          <label>First Name</label>
+          <input type="text" id="f_name" name="f_name" required type="text">
+          <label>Last Name</label>
+          <input type="text" id="l_name" name="l_name" required type="text">
+        </div>
+        <div class="form__section3">
+          <div class="form__section3__no_days">
+            <label>Number of Days</label>
+            <input type="number" id="no_day" name="no_day" min="1" max="15">
+          </div>
+          <div class="break"></div> 
+          <div class="form__section3__ppl">
+            <label>Number of People</label>
+            <input type="number" id="no_ppl" name="no_ppl" min="1" max="4">
+          </div>
+          <div class="break"></div> 
+          <div class="form__section3__eml" >
+            <label>Email</label>
+            <input type="email" id="email" name="email" required type="text">
+          </div>
+          <div class="break"></div> 
+          <div class="form__section3__dob">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" name="dob" required type="text">
+          </div>
+          <div class="break"></div> 
+          <div class="form__button">
+            <p>Find Accomidation Now</p>
+            <button type="submit" value="submit">Explore</button>
+          </div>
+      </form>
+    </div>
+
+    <!-- Show and Hide Options -->
+    <div class="hidden">
+      <div class="hidden__title">
+        <h2>My Accomidation Options</h2>
+      </div>
+      <hr>
+      <div class="hidden__options">
+      </div>
+    </div>
+
+    <!-- Show and Hide Options FOOD --> 
+    <div class="container-food">
+      <div class="container-food__title">
+        <h2>my meal options</h2>
+      </div>
+      <hr>
+      <div class="container-food__imgs">
+        <img src="images/food1.png" alt="food1">
+        <img src="images/food2.png" alt="food2">
+        <img src="images/food3.png" alt="food3">
+      </div>
+      <div class="container-food__imgs">
+        <h2>option 1</h2>
+        <h2>option 2</h2>
+        <h2>option 3</h2>
+      </div>
+      <div class="container-food__imgs">
+        <h2>$25 pp</h2>
+        <h2>$30 pp</h2>
+        <h2>$40 pp</h2>
+      </div>
+      <div class="container-food__imgs">
+        <h2>the basics</p=h2>
+        <h2>the works</h2>
+        <h2>the delux</h2>
+      </div>
+      <div class="container-food__text">
+        <p>Tuck into all your favourite snacks with the basics. Inc 1 snack of choice and drink.</p>
+        <p>Get a meal of your choice along with 1 snack and drink of choice. Unlimited drink refill.</p>
+        <p>Get complementry cheese board on arival with meal of choice, unlimited snacks.</p>
+      </div>
+
+      <div class="container-food__title">
+        <br>
+        <br>
+        <h2>my meal selection</h2>
+      </div>
+      <hr>
+
+      <!-- Meal Selection form --> 
+      <div class="form2" action="Home.html" method="GET">
+      <form>
+        <div class="form2__section1">
+          <label>Your Selection</label>
+          <select name="dropdown" class="food">
+              <option value = "The Basics" selected>The Basics</option>
+              <option value = "The Works">The Works</option>
+              <option value = "The Delux">The Delux</option>
+              <option value = "The Delux">None</option>
+          </select>
+        </div>
+        <div class="form2__section2">
+          <label>Any Notes</label>
+          <textarea type="text" id="notes" name="notes" rows="4" cols="50"></textarea>
+        </div>
+        <div class="form2__button">
+          <button type="submit" value="submit">Process order</button>
+        </div>
+      </form>
+      </div>
+      </div>
+      </span>
+
+    </div> 
+    
+      <!-- FAQ --> 
+    <div class="container2">
+      <div class="container2__title">
+        <h1>about us</h1>
+        <h2>faq</h2>
+      </div>
+      <hr>
+      <div class="container2__text">
+        <p>What is BIY? How does it work?</p>
+        <p>Tourism New Zealand works with the tourism industry to positively promote New Zealand internationally. They have a new campaign that is aimed at visitors staying for short periods, booking their own accommodation and arranging their own transport.</p>
+      </div>
+    </div>
+
+    </span>
+  </span>
+    
+  <span id="page2">
+      <!-- Title + paragraph-->
+    <div class="container2">
+      <div class="container2__title">
+        <h1>ka pai! your booking has been <br> confirmed </h1>
+        
+      </div>
+      <hr>
+      <div class="container2__text">
+        <p>Tourism New Zealand is an organisation that supports NZ’s vast tourism industry and exhibits New Zealand as a tourist destination by marketing in specific groups in the global economy. 
+          The purpose of this project is to work with Tourism New Zealand and develop a single page web application. This application must allow for visitors to dynamically assess accommodation options that are given as feedback to inputs made by the user. The project that will commence will centre around Tourism New Zealand's newest campaign ‘BIY’ book it yourself campaign that focuses on users given their easy accessibility to ‘book it yourself’. The target audience of this project will focus on small groups looking to book short period holidays in New Zealand. BIY will facilitate these individuals by offering an easy, user focused, simplistic and aesthetic way of booking their next short holiday
+        </p>
+      </div>
+    </div>
+    <br>
+    <br>
+   <!-- Display user information after submit-->
+
+    <div class="container2">
+      <div class="container2__title">
+        <h1>your information</h1>
+      </div>
+      <hr>
+      <div class="container2__info">
+        <div class="container2__info__user">
+          <p>full name</p>
+          <span id="name-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>date of birth</p>
+          <span id="dob-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>number of days</p>
+          <span id="nod-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>number of people</p>
+          <span id="nop-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>email</p>
+          <span id="email-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>accomidation info</p>
+          <span id="acom-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>meal info</p>
+          <span id="meal-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+        <div class="container2__info__user">
+          <p>meal notes</p>
+          <span id="notes-replace">
+            <p>placeholder</p>
+          </span>
+        </div>
+      </div>
+
+      <div class="reference">
+        <div class="reference__info">
+          <p>reference number</p>
+          <p>1AJF020442</p>
+        </div>
+        <div class="reference__info">
+          <p>tax</p>
+          <p>$10.20</p>
+        </div>
+        <div class="reference__info">
+          <p>total cost</p>
+          <p>$456.20</p>
+        </div>
+      </div>
+    </div>
+
+  </span> 
+
+</body>
+
+</html>
+
