@@ -1,0 +1,334 @@
+/* variables and mixins inheretance */
+$white: #ffffff;
+$black: #000000;
+$mustard: #dac17c;
+$red: #a11d28;
+$blue: #1E506B;
+
+%font-style {
+  color: #ffffff;
+  font-family: 'PT Serif';
+  font-style: normal;
+}
+
+@mixin button-format($borderwidth:12px) { 
+  border-style: solid;
+  border: $borderwidth solid $mustard;
+  border-radius: 60px;
+  padding: .15em .75em;
+  background: $red;
+}
+
+@mixin header {
+  background: $blue;
+  box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  text-align: center;
+}
+
+@mixin hover-state {
+  color: $black;
+  text-decoration: none;
+}
+
+/* body and main formatting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  background-color: $blue;
+}
+
+/* first page formatting */
+.container1 { 
+  text-align: center;
+  &__home-img {
+    img {
+      width: 1316px;
+      padding: 50px;
+    }
+  }
+
+  &__ty-img {
+    img {
+      padding: 10px 0 0 0;
+      width: 1200px; 
+    }
+  }
+  &__box1 {
+    display: flex;
+    justify-content:center;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 106px;
+    padding: 0 0 25px 0;
+    &--text {
+      @extend %font-style;
+      padding: 0 40px 0 0 ;
+      text-transform: uppercase;
+    }
+    &--dropdown {
+      @include button-format;
+      @extend %font-style;
+      text-transform: uppercase;
+    }
+  }
+  &__button-continue {
+    font-size: 35px;
+    @include button-format;
+    @extend %font-style;
+    margin: 0 235px 0 235px;
+    h1 { 
+      text-transform: uppercase;
+    }
+  }
+
+  &__small-text {
+    @extend %font-style;
+    padding: 20px;
+    font-size: 25px;
+  }
+
+}
+
+/* link formatting */
+a:link {
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: $white;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  @include hover-state;
+}
+
+a:active {
+  color: $white;
+  text-decoration: none;
+}
+
+/* Header formatting */
+.header {
+  @include header;
+  padding: 0 30px 0 0;
+  img {
+    width: 400px;
+    margin: 0 0 0 40px;
+  }
+  &__logo{
+    flex: 1;
+    text-align: left;
+    margin: 20px 0 0 0;
+  }
+  &__checkout, &__order-num, &__back {
+    @include button-format($borderwidth:5px);
+    @extend %font-style;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 30px auto 50px 30px;
+    p {
+      padding: 5px 10px 0 10px;
+      display: block;
+      font-weight: bold;
+    }
+    button {
+      display: block;
+      font-weight: bold;
+      font-size: 30px;;
+    }
+  }
+}
+
+
+button {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+  @extend %font-style;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  @include hover-state;
+}
+
+/* Categories Formatting */
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    &__link {
+      @extend %font-style; 
+      font-size: 60px;
+      box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      padding: 90px 0 0 0;
+      flex-grow: 1;
+    }
+  }
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Items Formatting (Drinks, Food, Deals) */
+
+.choice {
+  display:flex;
+  flex-wrap: wrap;
+  &__img {
+    padding: 30px;
+  }
+  &__text {
+    flex: 4;
+    padding: 35px 0 0 0;
+    @extend %font-style;
+    h1 {
+      font-size: 50px;
+      padding: 0 0 10px 0;
+    }
+    h5 {
+      font-size: 35px;
+    }
+  }
+  .choice__link {
+    flex: 1;
+    padding: 105px 0 0 0;
+    button {
+     @include button-format($borderwidth:5px);
+     @extend %font-style;
+     font-size: 30px;
+     margin: 0 35px 0 0;
+     text-align: center;
+    }
+    button:hover {
+      @include hover-state;
+    }
+  }
+}
+
+
+/* Reciept Formatting */
+.reciept-text {
+  @extend %font-style;
+  h1 {
+    padding: 50px 40px 20px;
+    font-size: 50px;
+  }
+
+.reciept-text__text-choice {
+  display: flex;
+  font-size: 45px;
+  padding: 0 0 30px 40px;
+  p {
+    flex: 3;
+  }
+  h5 {
+    flex: 2;
+    padding: 0 0 0 10px;
+  }
+}
+
+.total {
+  display: flex;
+  font-size: 45px;
+  h1 {
+    flex:3;
+  }
+  h5 {
+    flex: 2;
+    text-decoration: underline;
+    padding: 70px 0 0 425px;
+  }
+}
+}
+.total__ty-button {
+  font-size: 30px;
+  padding: 50px 30px 0 0;
+  text-transform: uppercase;
+  h3 {
+    @include button-format($borderwidth:5px);
+  }
+
+}
+
+/* pop up code formatting */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 5px solid $mustard;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: $red;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid $mustard;
+}
+
+.modal__header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal__header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal__body {
+  padding: 10px 15px;
+  p {
+    @extend %font-style;
+    text-transform: none;
+  }
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

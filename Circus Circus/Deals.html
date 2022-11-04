@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Circus Circus</title>
+  <meta charset="utf-8">
+  <link href="scss/style.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!--  HEADERS -->
+  <div class="header">
+    <div class="header__logo">
+      <img src="images/logo.png" alt="logo">
+    </div>
+    <div class="header__back">
+      <a href="Category.html">
+        <h3>back</h3>
+      </a>
+    </div>
+    <div class="header__checkout">
+      <a href="Checkout.html">
+        <h3>checkout</h3>
+      </a>
+    </div>
+    <div class="header__checkout">
+      <button data-modal-target="#modal">Help</button>
+      <div class="modal" id="modal">
+        <div class="modal__header">
+          <div class="title">Hold onto your top hats!</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal__body">
+         <p>Help is on its way! Please wait for one of our friendly staff members to make their way to your table! </p>
+        <br>
+        <p>Thank you for your patience!</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </div>
+    <div class="header__order-num">
+      <h3>#1</h3>
+    </div>
+  </div>
+
+
+  <!--  Choices Of Deals -->
+  <div class="choice">
+    <div class="choice__img"><img src="images/f2.png" alt="deals"></div>
+    <div class="choice__text">
+      <h1>Muffin and Small Coffee</h1>
+      <h5>-$6.50</h5>
+    </div>
+    <div class="choice__link"><button type="button">add</button></div>
+  </div>
+  <div class="break"></div>
+  <div class="choice">
+    <div class="choice__img"><img src="images/deal.png" alt="deals"></div>
+    <div class="choice__text">
+      <h1>Scone and Small Coffee</h1>
+      <h5>-$6.00</h5>
+    </div>
+    <div class="choice__link"><button type="button">add</button></div>
+  </div>
+  <div class="break"></div>
+</body>
+
+</html>
